@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tipcalcapp.TipCalculatorController">
+  <columnConstraints>
+    <ColumnConstraints fx:id="GridPane" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints valignment="BOTTOM" vgrow="SOMETIMES" />
+    <RowConstraints valignment="BOTTOM" vgrow="SOMETIMES" />
+      <RowConstraints valignment="BOTTOM" vgrow="SOMETIMES" />
+      <RowConstraints vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="amountLabel" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" text="Amount" textAlignment="CENTER" textFill="#a42e47">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="tipPercentageLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="15%" textAlignment="CENTER" textFill="#a42e47" GridPane.rowIndex="1">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="tipAmountLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Tip" textAlignment="CENTER" textFill="#a42e47" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalAmountLabel" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Total" textAlignment="CENTER" textFill="#a42e47" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="amountTextField" GridPane.columnIndex="1" />
+      <TextField fx:id="tipTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="totalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Slider fx:id="tipPercentageSlider" blockIncrement="5.0" max="30.0" value="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="calcButton" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#calculateButtonPressed" text="Calculate" textAlignment="CENTER" textFill="#a42e47" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>
